@@ -1,0 +1,3341 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyM2jn2ly04Bk+ztF/kH/Dzp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/NatalieAleksandrova2026/DTA_2026/blob/main/Homework/task_62\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "oU-rn2SFlACS"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aa4e2aba"
+      },
+      "source": [
+        "# 🐍 Python: Практикум\n",
+        "\n",
+        "**Час виконання:** 3 години  \n",
+        "**Формат:** індивідуальна робота\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 📋 Що ви будете практикувати\n",
+        "\n",
+        "| Розділ | Тема | Кількість завдань |\n",
+        "|---|---|---|\n",
+        "| 1 | `print`, `input`, змінні | 8 |\n",
+        "| 2 | `if / elif / else` (умови) | 10 |\n",
+        "| 3 | Цикл `for` з `range()` | 10 |\n",
+        "| 4 | Цикл `for` з рядками і списками | 10 |\n",
+        "| 5 | Цикл `while` | 8 |\n",
+        "| 6 | Списки (`list`) — методи та операції | 10 |\n",
+        "| 7 | 🔥 Комбіновані завдання | 6 |\n",
+        "\n",
+        "**Усього:** 62 завдання\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 📌 Як працювати з зошитом\n",
+        "\n",
+        "1. Читайте умову уважно — там може бути більше деталей, ніж здається\n",
+        "2. Не поспішайте — якщо завдання здається складним, почніть з простого варіанту, а потім ускладнюйте\n",
+        "3. Запускайте код часто (Shift + Enter), щоб перевіряти, що все працює\n",
+        "4. Якщо щось не виходить — перечитайте підказку (якщо є), погугліть, поекспериментуйте\n",
+        "5. **Помилки — це нормально!** Кожен програміст бачить їх сотні разів на день\n",
+        "\n",
+        "> 💡 У завданнях позначено: ⭐ — легке, ⭐⭐ — середнє, ⭐⭐⭐ — складне\n",
+        "\n",
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ea201033"
+      },
+      "source": [
+        "# Розділ 1. `print`, `input` та змінні\n",
+        "\n",
+        "Базові завдання на введення-виведення та роботу зі змінними.\n",
+        "\n",
+        "**Що треба знати:**\n",
+        "- `print(...)` — вивести на екран\n",
+        "- `input(\"текст: \")` — отримати ввід від користувача (повертає текст!)\n",
+        "- `int(...)`, `float(...)` — перетворити текст у число\n",
+        "- Арифметика: `+`, `-`, `*`, `/`, `**` (степінь), `%` (залишок)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4fc08054"
+      },
+      "source": [
+        "### Завдання 1. Привітання ⭐\n",
+        "\n",
+        "Запитайте у користувача його ім'я і виведіть привітання.\n",
+        "\n",
+        "**Приклад:**\n",
+        "```\n",
+        "Як вас звати? Олена\n",
+        "Привіт, Олена!\n",
+        "```"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "981e2487",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3d2d7c42-dd71-47ca-caa9-781b37ec7619"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What is your name? Olena\n",
+            "Olena\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 1:\n",
+        "n = input(\"What is your name? \")\n",
+        "print(n)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "f5dd97b7"
+      },
+      "source": [
+        "### Завдання 2. Сума двох чисел ⭐\n",
+        "\n",
+        "Запитайте у користувача два числа і виведіть їхню суму.\n",
+        "\n",
+        "**Приклад:**\n",
+        "```\n",
+        "Перше число: 7\n",
+        "Друге число: 12\n",
+        "Сума: 19\n",
+        "```\n",
+        "\n",
+        "> 💡 **Підказка:** Не забудьте перетворити введення на число через `int(...)`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "99fdde9f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d068b320-db8a-43c7-b6b2-44d1142f7ed7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Перше число 7\n",
+            "Друге число 12\n",
+            "Сума  19\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 2:\n",
+        "n1 = int(input(\"Перше число \"))\n",
+        "n2 = int(input(\"Друге число \"))\n",
+        "sum = n1 + n2\n",
+        "print(\"Сума \", sum)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ece8bd3d"
+      },
+      "source": [
+        "### Завдання 3. Площа прямокутника ⭐\n",
+        "\n",
+        "Запитайте довжину та ширину прямокутника і виведіть його площу."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "daf70ef7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "07ac4c6c-c20e-42c1-cba4-d3528dedce6a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter length: 6\n",
+            "Enter width: 8\n",
+            "48\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 3:\n",
+        "a = int(input(\"Enter length: \"))\n",
+        "b = int(input(\"Enter width: \"))\n",
+        "area = a * b\n",
+        "print(area)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3d64711c"
+      },
+      "source": [
+        "### Завдання 4. Сантиметри в метри ⭐\n",
+        "\n",
+        "Запитайте у користувача кількість сантиметрів і переведіть їх у метри.\n",
+        "\n",
+        "**Приклад:**\n",
+        "```\n",
+        "Кількість см: 250\n",
+        "Це 2.5 м\n",
+        "```"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6b543761",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "40009cd3-374c-4286-8262-9c5454659c74"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Кількість см: 250\n",
+            "Це 2.5 м\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 4:\n",
+        "m = int(input(\"Кількість см: \"))\n",
+        "n = m / 100\n",
+        "print(\"Це\", n, \"м\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7481a0cb"
+      },
+      "source": [
+        "### Завдання 5. Округлення оцінки ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача оцінку (число з крапкою, наприклад 4.7).\n",
+        "Виведіть її, округлену до цілого числа.\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте функцію `round()`. Не забудьте `float()` замість `int()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "36c8d434",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "02d84971-85b3-42af-ed5e-6c2bf6a16455"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter grade: 4.7\n",
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 5:\n",
+        "n = float(input(\"Enter grade: \"))\n",
+        "print(round(n))\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7fac0d7e"
+      },
+      "source": [
+        "### Завдання 6. Ціна з ПДВ ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача ціну товару без ПДВ.\n",
+        "Розрахуйте та виведіть:\n",
+        "- суму ПДВ (20% від ціни)\n",
+        "- кінцеву ціну (ціна + ПДВ)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5cae5867",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "92e99be4-533d-42df-b9fd-9783501306ab"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Price: 89\n",
+            "106.8\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 6:\n",
+        "p = float(input(\"Price: \"))\n",
+        "s = p * 20 / 100 + p\n",
+        "print(s)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9c63148a"
+      },
+      "source": [
+        "### Завдання 7. Зворотній відлік ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача число `n` і виведіть на одному рядку числа від `n` до 1, розділені пробілами.\n",
+        "\n",
+        "**Приклад:**\n",
+        "```\n",
+        "Введіть число: 5\n",
+        "5 4 3 2 1\n",
+        "```\n",
+        "\n",
+        "> 💡 **Підказка:** Можна використати `print(n, n-1, n-2, n-3, n-4)` — лише для цього завдання, без циклу."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "e30fc73d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a8d37c29-8069-4216-fad5-68818d41b232"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 5\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 7:\n",
+        "n = int(input(\"Enter number: \"))\n",
+        "for i in range(n, 0, -1):\n",
+        "  print(i)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "088610d6"
+      },
+      "source": [
+        "### Завдання 8. Обмін значень змінних ⭐⭐⭐\n",
+        "\n",
+        "Створіть дві змінні `a = 10` і `b = 20`. Поміняйте їхні значення місцями (щоб `a` стало 20, а `b` — 10) і виведіть результат.\n",
+        "\n",
+        "> 💡 **Підказка:** Можна через третю тимчасову змінну, або в Python є дуже короткий спосіб: `a, b = b, a`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f0eacf1f"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 8:\n",
+        "a = 10\n",
+        "b = 20"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b = b, a"
+      ],
+      "metadata": {
+        "id": "hcoPEBtDJGZo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c = a\n",
+        "a = b\n",
+        "b = c"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZC54phv5JPcs",
+        "outputId": "b5ddeeec-c349-4e39-e221-547df83cea16"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "10"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\"\"\"a = 10\n",
+        "b = 20\n",
+        "c = a\n",
+        "a = b\n",
+        "b = c\n",
+        "print(a, b)\"\"\"\n",
+        "a = 20\n",
+        "b = 30\n",
+        "a, b = b, a\n",
+        "print(a, b)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8-m6DYvSwQtO",
+        "outputId": "1afd2d4b-7b25-4482-98e7-b85dc5f0d2f1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0e65ea27"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "# Розділ 2. Умови `if / elif / else`\n",
+        "\n",
+        "**Що треба знати:**\n",
+        "- `if умова:` — якщо умова правдива\n",
+        "- `elif умова:` — інакше якщо\n",
+        "- `else:` — у всіх інших випадках\n",
+        "- Оператори порівняння: `==`, `!=`, `>`, `<`, `>=`, `<=`\n",
+        "- Логічні оператори: `and`, `or`, `not`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b020b48f"
+      },
+      "source": [
+        "### Завдання 9. Парне чи непарне ⭐\n",
+        "\n",
+        "Запитайте у користувача число і виведіть, парне воно чи непарне.\n",
+        "\n",
+        "> 💡 **Підказка:** Парне число ділиться на 2 без остачі: `n % 2 == 0`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "c0d9bbcf",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b05702d4-ad44-4fa5-a068-27c4567d6a08"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 26\n",
+            "Even number\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 9:\n",
+        "n = int(input(\"Enter number: \"))\n",
+        "if n % 2 == 0:\n",
+        "  print(\"Even number\")\n",
+        "else:\n",
+        "  print(\"Odd number\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0a8d17f4"
+      },
+      "source": [
+        "### Завдання 10. Додатнє, від'ємне чи нуль ⭐\n",
+        "\n",
+        "Запитайте у користувача число і виведіть, додатнє воно, від'ємне чи дорівнює нулю."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "75d333d8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "06129bf5-fabc-4b6a-85f0-b6b3a985d29b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 0\n",
+            "zero\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 10:\n",
+        "n = int(input(\"Enter number: \"))\n",
+        "if n > 0:\n",
+        "  print (\"Positive number\")\n",
+        "elif n < 0:\n",
+        "  print(\"Negative number\")\n",
+        "elif n == 0:\n",
+        "  print(\"zero\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "191b71ef"
+      },
+      "source": [
+        "### Завдання 11. Більше з двох ⭐\n",
+        "\n",
+        "Запитайте у користувача два числа і виведіть більше з них.\n",
+        "Якщо числа рівні — виведіть «числа рівні»."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "623bf39d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0454522f-1258-4950-ef26-cd4bfaab0d74"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter 1 number: 7\n",
+            "Enter 2 number: 7\n",
+            "Equal numbers\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 11:\n",
+        "n1 = int(input(\"Enter 1 number: \"))\n",
+        "n2 = int(input(\"Enter 2 number: \"))\n",
+        "if n1 > n2:\n",
+        "  print(n1)\n",
+        "elif n2 > n1:\n",
+        "  print(n2)\n",
+        "else:\n",
+        "  print(\"Equal numbers\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0d3c855e"
+      },
+      "source": [
+        "### Завдання 12. Чи може людина голосувати ⭐\n",
+        "\n",
+        "Запитайте у користувача вік. Виведіть:\n",
+        "- «Ви можете голосувати» — якщо вік ≥ 18\n",
+        "- «Ви ще малі для голосування» — якщо вік < 18\n",
+        "- «Некоректний вік» — якщо вік від'ємний"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "29cc1c44",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "efc83095-a2ce-440a-ec2e-84c0d9aa5485"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Age: 8\n",
+            "child\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 12:\n",
+        "a = int(input(\"Age: \"))\n",
+        "if a >= 18 and a < 100:\n",
+        "  print(\"adult\")\n",
+        "elif a < 18 and a > 0:\n",
+        "  print(\"child\")\n",
+        "else:\n",
+        "  print(\"Invalid age\")\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "a1d219f6"
+      },
+      "source": [
+        "### Завдання 13. Оцінка за бал ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача оцінку (від 0 до 100) і виведіть:\n",
+        "- 90+ → «Відмінно»\n",
+        "- 75-89 → «Добре»\n",
+        "- 60-74 → «Задовільно»\n",
+        "- 0-59 → «Не склав»\n",
+        "- інакше (від'ємні або >100) → «Некоректна оцінка»"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "24afc047",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "84e770f1-6bf2-49b9-f1f1-ea330c7d78d4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter grade: 120\n",
+            "Invalid grade\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 13:\n",
+        "g = int(input(\"Enter grade: \"))\n",
+        "if g >=90 and g <= 100:\n",
+        "  print(\"Excellent\")\n",
+        "elif g >= 75 and g < 90:\n",
+        "  print(\"Good\")\n",
+        "elif g >=60 and g < 75:\n",
+        "  print(\"C\")\n",
+        "elif g >= 0 and g <60:\n",
+        "  print(\"Not accepted\")\n",
+        "else:\n",
+        "  print(\"Invalid grade\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c36ab14a"
+      },
+      "source": [
+        "### Завдання 14. Найбільше з трьох ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача три числа і виведіть найбільше з них.\n",
+        "\n",
+        "> 💡 **Підказка:** Можна або послідовно через `if/elif`, або скористатись вбудованою функцією `max()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fca1e7c6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f1337256-061b-4ce0-c136-4ced7fcae984"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 7\n",
+            "Enter number: 8\n",
+            "Enter number: 8\n",
+            "8\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 14:\n",
+        "n1 = int(input(\"Enter number: \"))\n",
+        "n2 = int(input(\"Enter number: \"))\n",
+        "n3 = int(input(\"Enter number: \"))\n",
+        "\"\"\"if n1 > n2 and n1 > n3:\n",
+        "  print(n1)\n",
+        "elif n2 > n1 and n2 > n3:\n",
+        "  print(n2)\n",
+        "elif n3 > n1 and n3 > n2:\n",
+        "  print(n3)\n",
+        "elif n1 == n2 and n1 > n3 or n1 == n3 and n1 > n2:\n",
+        "  print(n1)\n",
+        "elif n2 == n3 and n2 > n1:\n",
+        "  print(n2)\n",
+        "else:\n",
+        "  print(\"n1\")\"\"\"\n",
+        "print(max(n1, n2, n3))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "14444897"
+      },
+      "source": [
+        "### Завдання 15. Високосний рік ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача рік і визначте, чи є він високосним.\n",
+        "\n",
+        "**Правила:** Рік є високосним, якщо:\n",
+        "- ділиться на 4, АЛЕ\n",
+        "- НЕ ділиться на 100, АБО\n",
+        "- ділиться на 400\n",
+        "\n",
+        "**Приклади:** 2024 — високосний, 2023 — ні, 1900 — ні, 2000 — високосний.\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте логічні оператори `and` та `or`. Умова: `(рік % 4 == 0 and рік % 100 != 0) or рік % 400 == 0`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5bf9b5c1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3e572c64-cff7-42a3-d3fb-4ad80463d14c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Year: 2026\n",
+            "Common year\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 15:\n",
+        "y = int(input(\"Year: \"))\n",
+        "if (y % 4 == 0 and y % 100 != 0) or y % 400 == 0:\n",
+        "  print(\"Leap year\")\n",
+        "else:\n",
+        "  print(\"Common year\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3354853a"
+      },
+      "source": [
+        "### Завдання 16. Пори року ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача номер місяця (1-12) і виведіть, до якої пори року він належить:\n",
+        "- 12, 1, 2 → зима\n",
+        "- 3, 4, 5 → весна\n",
+        "- 6, 7, 8 → літо\n",
+        "- 9, 10, 11 → осінь\n",
+        "- інакше → «Некоректний місяць»"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1c0f92f2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5d55519d-e895-41d9-ff06-9d00df30a1d0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Month 13\n",
+            "Invalid month\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 16:\n",
+        "m = int(input(\"Month \"))\n",
+        "if m == 12 or m == 1 or m == 2:\n",
+        "  print(\"Winter\")\n",
+        "elif m == 3 or m == 4 or m == 5:\n",
+        "  print(\"Spring\")\n",
+        "elif m == 6 or m == 7 or m == 8:\n",
+        "  print(\"Summer\")\n",
+        "elif m == 9 or m == 10 or m == 11:\n",
+        "  print(\"Autumn\")\n",
+        "else:\n",
+        "  print(\"Invalid month\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "67533ebc"
+      },
+      "source": [
+        "### Завдання 17. Калькулятор ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача два числа і знак операції (`+`, `-`, `*`, `/`).\n",
+        "Виведіть результат відповідної операції.\n",
+        "\n",
+        "**Приклад:**\n",
+        "```\n",
+        "Перше число: 10\n",
+        "Друге число: 3\n",
+        "Знак: *\n",
+        "Результат: 30\n",
+        "```\n",
+        "\n",
+        "⚠️ Не забудьте перевірити ділення на 0!"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "127ccd2b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b576339d-6ba1-479a-d24f-d0c4b41ee45f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number 1 8\n",
+            "Number 2 0\n",
+            "Operation sign /\n",
+            "Zero division mistake\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 17:\n",
+        "n1 = int(input(\"Number 1 \"))\n",
+        "n2 = int(input(\"Number 2 \"))\n",
+        "a = input(\"Operation sign \")\n",
+        "if a == \"+\":\n",
+        "  print(n1 + n2)\n",
+        "elif a == \"-\":\n",
+        "  print(n1 - n2)\n",
+        "elif a == \"*\":\n",
+        "  print(n1 * n2)\n",
+        "elif a == \"/\" and n2 != 0:\n",
+        "  print(n1 / n2)\n",
+        "elif a == \"/\"  and n2 == 0:\n",
+        "  print(\"Zero division mistake\")\n",
+        "else:\n",
+        "  print(\"Invalid sign\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9b2f58d4"
+      },
+      "source": [
+        "### Завдання 18. Трикутник ⭐⭐⭐\n",
+        "\n",
+        "Запитайте у користувача три довжини сторін і визначте:\n",
+        "1. Чи можна з них скласти трикутник? (правило: сума будь-яких двох сторін має бути більшою за третю)\n",
+        "2. Якщо можна — який це трикутник:\n",
+        "   - рівносторонній (всі сторони рівні)\n",
+        "   - рівнобедрений (дві сторони рівні)\n",
+        "   - різносторонній (всі різні)\n",
+        "\n",
+        "> 💡 **Підказка:** Спочатку перевірте, чи трикутник взагалі існує. Потім вже визначайте тип через порівняння сторін."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "305e65ad",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6f2f8843-5fb3-4e20-c7ad-649df11913b6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Сторона 1 3\n",
+            "Сторона 2 3\n",
+            "Сторона 3 4\n",
+            "трикутник існує\n",
+            "рівнобедрений\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 18:\n",
+        "a = int(input(\"Сторона 1 \"))\n",
+        "b = int(input(\"Сторона 2 \"))\n",
+        "c = int(input(\"Сторона 3 \"))\n",
+        "if a + b > c and b + c > a and a + c > b:\n",
+        "  print(\"трикутник існує\")\n",
+        "  if a == b and b == c and a == c:\n",
+        "    print(\"рівносторонній\")\n",
+        "  elif a == b or b == c or a == c:\n",
+        "    print(\"рівнобедрений\")\n",
+        "  else:\n",
+        "    print(\"різносторонній\")\n",
+        "else:\n",
+        "  print(\"трикутник не існує\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "728894d6"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "# Розділ 3. Цикл `for` з `range()`\n",
+        "\n",
+        "**Що треба знати:**\n",
+        "- `range(n)` → 0, 1, ..., n-1\n",
+        "- `range(a, b)` → a, a+1, ..., b-1\n",
+        "- `range(a, b, step)` → a, a+step, ... (з кроком, не доходячи до b)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fba8c8df"
+      },
+      "source": [
+        "### Завдання 19. Числа від 1 до 20 ⭐\n",
+        "\n",
+        "Виведіть всі числа від 1 до 20, кожне на новому рядку."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "b56e7d9b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "19d8cf62-7b46-4450-d543-a13efe4aae07"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "12\n",
+            "13\n",
+            "14\n",
+            "15\n",
+            "16\n",
+            "17\n",
+            "18\n",
+            "19\n",
+            "20\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 19:\n",
+        "for a in range(1, 21, 1):\n",
+        "  print(a)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "72edc0ac"
+      },
+      "source": [
+        "### Завдання 20. Парні числа ⭐\n",
+        "\n",
+        "Виведіть всі парні числа від 2 до 30.\n",
+        "\n",
+        "> 💡 **Підказка:** Можна через `range(2, 31, 2)` або через перевірку `if n % 2 == 0`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "a8792638",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8b3682c5-6a2e-470a-a8f3-098cbde42dcb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n",
+            "20\n",
+            "22\n",
+            "24\n",
+            "26\n",
+            "28\n",
+            "30\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 20:\n",
+        "\"\"\"for a in range(2, 31, 2):\n",
+        "  print(a)\"\"\"\n",
+        "for a in range(1, 31, 1):\n",
+        "  if a % 2 == 0:\n",
+        "    print(a)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5f86b79f"
+      },
+      "source": [
+        "### Завдання 21. Сума від 1 до 100 ⭐\n",
+        "\n",
+        "Підрахуйте суму всіх чисел від 1 до 100 і виведіть результат. Очікуване число — 5050."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "499024fd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "649cba95-6afc-48fc-95f9-800cae196b54"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5050\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 21:\n",
+        "print(sum(range(1, 101)))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "f55a1ba9"
+      },
+      "source": [
+        "### Завдання 22. Таблиця множення ⭐\n",
+        "\n",
+        "Запитайте у користувача число і виведіть таблицю множення цього числа на числа від 1 до 10.\n",
+        "\n",
+        "**Приклад при введенні 7:**\n",
+        "```\n",
+        "7 * 1 = 7\n",
+        "7 * 2 = 14\n",
+        "...\n",
+        "7 * 10 = 70\n",
+        "```"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f7d95fb4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "19dc6025-f804-4654-e36c-c73affebf030"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number 5\n",
+            "5 * 1 = 5\n",
+            "5 * 2 = 10\n",
+            "5 * 3 = 15\n",
+            "5 * 4 = 20\n",
+            "5 * 5 = 25\n",
+            "5 * 6 = 30\n",
+            "5 * 7 = 35\n",
+            "5 * 8 = 40\n",
+            "5 * 9 = 45\n",
+            "5 * 10 = 50\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 22:\n",
+        "n = int(input(\"Number \"))\n",
+        "for i in range(1, 11):\n",
+        "  print(n, \"*\", i, \"=\", n * i)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9fcad518"
+      },
+      "source": [
+        "### Завдання 23. Сума парних чисел ⭐⭐\n",
+        "\n",
+        "Підрахуйте суму всіх парних чисел від 1 до 100."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "a0b888d1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5e97c940-87d5-439b-c09e-2dbe673bdf49"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2550\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 23:\n",
+        "\"\"\"n = 0\n",
+        "for i in range(1, 101):\n",
+        "  if i % 2 == 0:\n",
+        "    n += i\n",
+        "print(n)\"\"\"\n",
+        "n = 0\n",
+        "for i in range(2, 101, 2):\n",
+        "  n += i\n",
+        "print(n)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e12979ed"
+      },
+      "source": [
+        "### Завдання 24. Факторіал ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача число `n` і обчисліть його факторіал (`n!`).\n",
+        "\n",
+        "**Нагадування:** факторіал — це добуток всіх чисел від 1 до `n`.  \n",
+        "Наприклад, `5! = 1 * 2 * 3 * 4 * 5 = 120`.\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть змінну `result = 1`, а потім у циклі множте її на кожне число."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "99a68a67",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6faf7a28-2cac-4d8f-e35c-db22846bfc49"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 5\n",
+            "1\n",
+            "2\n",
+            "6\n",
+            "24\n",
+            "120\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 24:\n",
+        "n = int(input(\"Enter number: \"))\n",
+        "result = 1\n",
+        "for i in range(1, n + 1, 1):\n",
+        "  result *= i\n",
+        "  print(result)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fff5593c"
+      },
+      "source": [
+        "### Завдання 25. Степінь числа ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача два числа: основу `a` і степінь `n`.\n",
+        "Обчисліть `a` в степені `n`, НЕ використовуючи оператор `**`.\n",
+        "\n",
+        "**Приклад:** `a = 3, n = 4` → `3 * 3 * 3 * 3 = 81`\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть змінну `result = 1` і помножте її на `a` рівно `n` разів."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "b2630461",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "aa8b440c-ecb3-4c05-cbbe-93017627d38a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number 8\n",
+            "Enter degree 9\n",
+            "134217728\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 25:\n",
+        "a = int(input(\"Enter number \"))\n",
+        "n = int(input(\"Enter degree \"))\n",
+        "result = 1\n",
+        "for i in range(1, n + 1):\n",
+        "  result *= a\n",
+        "print(result)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5f9534b2"
+      },
+      "source": [
+        "### Завдання 26. Сума цифр числа ⭐⭐⭐\n",
+        "\n",
+        "Запитайте у користувача число і знайдіть суму його цифр.\n",
+        "\n",
+        "**Приклад:** число 1234 → сума 1+2+3+4 = 10\n",
+        "\n",
+        "> 💡 **Підказка:** Найпростіший спосіб: перетворити число на рядок через `str()`, а потім перебрати символи у циклі і додавати `int(символ)` до суми."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3d46f21e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e63087b9-deca-4797-98d5-0f93d0f81408"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number 1234\n",
+            "1\n",
+            "3\n",
+            "6\n",
+            "10\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 26:\n",
+        "\"\"\"n = int(input(\"Enter number \"))\n",
+        "s = 0\n",
+        "while n!= 0:\n",
+        "  s += n % 10\n",
+        "  n = n // 10\n",
+        "print(s)\"\"\"\n",
+        "n = str(input(\"Enter number \"))\n",
+        "s = 0\n",
+        "k = len(n)\n",
+        "for i in range(0, k):\n",
+        "  s += int(n[i])\n",
+        "  print(s)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "278f3e72"
+      },
+      "source": [
+        "### Завдання 27. Прості числа ⭐⭐⭐\n",
+        "\n",
+        "Виведіть всі прості числа від 2 до 50.\n",
+        "\n",
+        "**Нагадування:** просте число — це число, яке ділиться тільки на 1 і саме на себе.\n",
+        "\n",
+        "> 💡 **Підказка:** Для кожного числа `n` від 2 до 50 перевіряйте, чи має воно дільники від 2 до n-1. Можна використати змінну-прапорець `is_prime = True`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "2cef41ee",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9017ef15-2440-4cad-c451-918e3c9a233e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "11\n",
+            "13\n",
+            "17\n",
+            "19\n",
+            "23\n",
+            "29\n",
+            "31\n",
+            "37\n",
+            "41\n",
+            "43\n",
+            "47\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 27:\n",
+        "for i in range(2, 51):\n",
+        "  for j in range(2, i // 2 + 1):\n",
+        "    if i % j == 0:\n",
+        "      break\n",
+        "  else:\n",
+        "    print(i)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b193d07b"
+      },
+      "source": [
+        "### Завдання 28. Малювання трикутника ⭐⭐⭐\n",
+        "\n",
+        "Виведіть на екран прямокутний трикутник з зірочок. Висоту запитайте у користувача.\n",
+        "\n",
+        "**Приклад при висоті 5:**\n",
+        "```\n",
+        "*\n",
+        "**\n",
+        "***\n",
+        "****\n",
+        "*****\n",
+        "```\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте вкладений цикл АБО операцію множення рядка: `'*' * n` повертає рядок з `n` зірочок."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "784573c9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "83598475-720e-4cf4-89ed-9e75c289d0ad"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter height 7\n",
+            "*\n",
+            "**\n",
+            "***\n",
+            "****\n",
+            "*****\n",
+            "******\n",
+            "*******\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 28:\n",
+        "while True:\n",
+        "  h = int(input(\"Enter height \"))\n",
+        "  if h < 2:\n",
+        "    print(\"Invalid number\")\n",
+        "  else:\n",
+        "    for i in range(1, h + 1):\n",
+        "      print(\"*\" * i)\n",
+        "    break\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "f5a27f37"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "# Розділ 4. Цикл `for` з рядками та списками\n",
+        "\n",
+        "**Що треба знати:**\n",
+        "- `for letter in \"Python\":` — перебираємо літери в рядку\n",
+        "- `for item in [1, 2, 3]:` — перебираємо елементи списку\n",
+        "- `len(x)` — довжина рядка або списку\n",
+        "- Перевірка наявності: `if \"a\" in word:`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "95be90d0"
+      },
+      "source": [
+        "### Завдання 29. Довжина слова ⭐\n",
+        "\n",
+        "Запитайте у користувача слово і виведіть кількість літер у ньому.\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте функцію `len()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5f9c4d73",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8fe2d310-e666-4fde-a714-31fa8b391b76"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Word: Beautiful\n",
+            "9\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 29:\n",
+        "n = input(\"Word: \")\n",
+        "k = len(n)\n",
+        "print(k)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9b8f3212"
+      },
+      "source": [
+        "### Завдання 30. Виведення кожної літери ⭐\n",
+        "\n",
+        "Запитайте у користувача слово і виведіть кожну літеру на новому рядку."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "a7949310",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "99732e0a-fd4d-40c0-a0ca-6cbb0dd76ea4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Word: happy\n",
+            "h\n",
+            "a\n",
+            "p\n",
+            "p\n",
+            "y\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 30:\n",
+        "n = input(\"Word: \")\n",
+        "for letter in n:\n",
+        "  print(letter)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0e0e5a38"
+      },
+      "source": [
+        "### Завдання 31. Підрахунок голосних ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача слово і підрахуйте кількість голосних літер у ньому.\n",
+        "\n",
+        "Голосні: `а е и і о у я ю є ї`.\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть лічильник `count = 0`. У циклі перевіряйте: `if letter in \"аеиіоуяюєї\":` і збільшуйте лічильник."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "646014e8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "34d0e2a2-a018-4e2d-deaf-4be4a122a23c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Word: Україна\n",
+            "4\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 31:\n",
+        "n = input(\"Word: \")\n",
+        "count = 0\n",
+        "for letter in n.lower():\n",
+        "  if letter in \"аеиіоуяюєї\":\n",
+        "    count += 1\n",
+        "print(count)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2686b32a"
+      },
+      "source": [
+        "### Завдання 32. Перевернуте слово ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача слово і виведіть його у зворотному порядку.\n",
+        "\n",
+        "**Приклад:** `Python` → `nohtyP`\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть порожній рядок `result = ''` і у циклі додавайте кожну літеру НА ПОЧАТОК: `result = letter + result`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "28dd9dc0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0778c7ed-6744-454c-aaaa-248489992359"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Word: Python\n",
+            "Перевернуте слово: nohtyP\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 32:\n",
+        "n = input(\"Word: \")\n",
+        "result = ''\n",
+        "for letter in n:\n",
+        "  result = letter + result\n",
+        "print(f\"Перевернуте слово: {result}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "daa0e9bd"
+      },
+      "source": [
+        "### Завдання 33. Підрахунок певної літери ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача слово і літеру. Виведіть, скільки разів ця літера зустрічається у слові."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "7f211805",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "af37bdd8-078b-47c8-b377-144aaeee9072"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Word happy\n",
+            "Letter p\n",
+            "Letter p is in word 2 times\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 33:\n",
+        "w = input(\"Word \")\n",
+        "l = input(\"Letter \")\n",
+        "count = 0\n",
+        "for char in w.lower():\n",
+        "  if char == l.lower():\n",
+        "    count += 1\n",
+        "print(f\"Letter {l} is in word {count} times\")\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4186f0eb"
+      },
+      "source": [
+        "### Завдання 34. Сума елементів списку ⭐\n",
+        "\n",
+        "Дано список `numbers = [12, 7, 18, 3, 25, 9, 14]`. Знайдіть і виведіть суму всіх його елементів. Очікуваний результат: 88."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f880dabe",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2d496d34-74f0-4494-9ea8-d26607003ce8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "88\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 34:\n",
+        "numbers = [12, 7, 18, 3, 25, 9, 14]\n",
+        "count = 0\n",
+        "for n in numbers:\n",
+        "  count += n\n",
+        "print(count)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "51a0e000"
+      },
+      "outputs": [],
+      "source": [
+        "# Дано:\n",
+        "numbers = [12, 7, 18, 3, 25, 9, 14]\n",
+        "# Ваш код:\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9e588584"
+      },
+      "source": [
+        "### Завдання 35. Найбільший і найменший ⭐⭐\n",
+        "\n",
+        "Дано список `numbers = [42, 17, 89, 3, 56, 91, 24, 8, 73]`. Знайдіть найбільший і найменший елементи **без використання `max()` та `min()`**.\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть змінні `maximum = numbers[0]` і `minimum = numbers[0]`, а потім у циклі порівнюйте."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "a70aee21"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 35:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9f39ff36",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "dfb835a1-8dd3-4f68-ac7c-c3c0132e24ae"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "91, 3\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers = [42, 17, 89, 3, 56, 91, 24, 8, 73]\n",
+        "maximum = numbers[0]\n",
+        "minimum = numbers[0]\n",
+        "for i in range(len(numbers)):\n",
+        "  if numbers[i] > maximum:\n",
+        "    maximum = numbers[i]\n",
+        "  if numbers[i] < minimum:\n",
+        "    minimum = numbers[i]\n",
+        "print(str(maximum)+\", \"+str(minimum))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "Kxnm6Gqq_rbj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "917d1015"
+      },
+      "source": [
+        "### Завдання 36. Тільки додатні ⭐⭐\n",
+        "\n",
+        "Дано список з додатними та від'ємними числами. Виведіть лише додатні."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3f7ea779"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 36:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "d66a5f4e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4f36b654-16b6-4fce-bb2d-1748cd4844e1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "12 7 25 9 30 "
+          ]
+        }
+      ],
+      "source": [
+        "numbers = [12, -5, 7, -18, 25, 0, -3, 9, -14, 30]\n",
+        "for n in numbers:\n",
+        "  if n > 0:\n",
+        "    print(n, end= \" \")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9b413e9c"
+      },
+      "source": [
+        "### Завдання 37. Середній бал ⭐⭐\n",
+        "\n",
+        "Дано список оцінок студентів. Підрахуйте середній бал.\n",
+        "\n",
+        "> 💡 **Підказка:** Середнє = сума / кількість. Кількість можна отримати через `len()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9399d879"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 37:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "196709c7"
+      },
+      "outputs": [],
+      "source": [
+        "grades = [85, 72, 90, 65, 78, 88, 92, 70, 81, 76]\n",
+        "total = 0\n",
+        "for grade in grades:\n",
+        "  total += grade\n",
+        "  count = len(grades)\n",
+        "  avg_grade = total / count\n",
+        "print(f\"Average Grade: {avg_grade}\")\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "a069e68f"
+      },
+      "source": [
+        "### Завдання 38. Найдовше слово ⭐⭐⭐\n",
+        "\n",
+        "Дано список слів. Знайдіть і виведіть найдовше слово.\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть змінну `longest = words[0]`, а потім у циклі порівнюйте через `len()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "85104e16"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 38:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9ae2f253",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "658d8367-49d9-4f42-a4b7-13e410a26ec4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "програмування\n"
+          ]
+        }
+      ],
+      "source": [
+        "words = [\"кіт\", \"програмування\", \"Python\", \"школа\", \"інформатика\", \"олівець\"]\n",
+        "longest = words[0]\n",
+        "for i in range(len(words)):\n",
+        "  if len(words[i]) > len(longest):\n",
+        "    longest = words[i]\n",
+        "print(longest)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0b759e76"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "# Розділ 5. Цикл `while`\n",
+        "\n",
+        "**Що треба знати:**\n",
+        "- `while умова:` — повторюємо, поки умова правдива\n",
+        "- ⚠️ Завжди має бути щось, що змінює умову — інакше нескінченний цикл!\n",
+        "- Використовуємо `while`, коли наперед не відомо, скільки разів повторювати"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "37f40a1c"
+      },
+      "source": [
+        "### Завдання 39. Лічильник до 10 ⭐\n",
+        "\n",
+        "За допомогою циклу `while` виведіть числа від 1 до 10."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4cb9d6fb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "547ea293-e5e3-4fac-a039-3d72011bed7c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 2 3 4 5 6 7 8 9 10 11 "
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 39:\n",
+        "num = 0\n",
+        "while num <= 10:\n",
+        "  num += 1\n",
+        "  print(num, end= \" \")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4b02ca64"
+      },
+      "source": [
+        "### Завдання 40. Зворотній відлік ⭐\n",
+        "\n",
+        "За допомогою циклу `while` виведіть числа від 10 до 1, потім надрукуйте «Старт!»."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "21f226a0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f5a41a62-d109-46c6-94bc-939eaffd8d7b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10 9 8 7 6 5 4 3 2 1 Start!\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 40:\n",
+        "num = 11\n",
+        "while num > 1:\n",
+        "  num -= 1\n",
+        "  print(num, end= \" \")\n",
+        "print(\"Start!\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4efc71ff"
+      },
+      "source": [
+        "### Завдання 41. Подвоєння ⭐⭐\n",
+        "\n",
+        "Починаючи з числа 1, подвоюйте його, поки воно менше 1000. Виводьте кожне значення.\n",
+        "\n",
+        "**Очікуваний результат:** 1, 2, 4, 8, 16, 32, 64, 128, 256, 512."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "78697b92",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0576d0af-96a9-436f-8f1e-0d7b07db4b86"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 2 4 8 16 32 64 128 256 512 "
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 41:\n",
+        "num = 1\n",
+        "while num < 1000:\n",
+        "\n",
+        "  print(num, end= \" \")\n",
+        "  num *= 2\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bff906e2"
+      },
+      "source": [
+        "### Завдання 42. Сума введених чисел ⭐⭐\n",
+        "\n",
+        "Просіть користувача вводити числа, доки він не введе 0.\n",
+        "Після цього виведіть суму всіх введених чисел (нуль не враховується).\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть змінну `total = 0` і змінну `number = -1` (щоб умова `while number != 0:` спрацювала на початку). Усередині циклу запитуйте число і додавайте до суми."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "208bc8ca",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "07e9002b-468b-44bf-ac79-4809fc2f54da"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 8\n",
+            "Enter number: 7\n",
+            "Enter number: 99\n",
+            "Enter number: 3\n",
+            "Enter number: 0\n",
+            "117\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 42:\n",
+        "number = -1\n",
+        "total = 0\n",
+        "while number != 0:\n",
+        "  number = int(input(\"Enter number: \"))\n",
+        "  total += number\n",
+        "print(total)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "38658a6c"
+      },
+      "source": [
+        "### Завдання 43. Кількість цифр у числі ⭐⭐\n",
+        "\n",
+        "Запитайте у користувача додатнє ціле число і підрахуйте, скільки в ньому цифр.\n",
+        "\n",
+        "**Приклад:** число 12345 → 5 цифр.\n",
+        "\n",
+        "> 💡 **Підказка:** Поки число більше за 0, ділимо його націло на 10 (`n = n // 10`) і збільшуємо лічильник на 1."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4db9f0f0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6a24503e-2e46-4a39-896f-54f24b1ef89f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 1488\n",
+            "4\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 43:\n",
+        "n = int(input(\"Enter number: \"))\n",
+        "count = 0\n",
+        "while n > 0:\n",
+        "  n = n // 10\n",
+        "  count += 1\n",
+        "print(count)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fe5edf73"
+      },
+      "source": [
+        "### Завдання 44. Перевірка пароля ⭐⭐\n",
+        "\n",
+        "Створіть змінну `correct_password = \"qwerty123\"`.\n",
+        "У циклі `while` запитуйте у користувача пароль, доки він не введе правильний.\n",
+        "Після успішного введення виведіть «Доступ дозволено»."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6af339d4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "237a483c-29b4-47f2-d5bb-505056164776"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter password: gghfjj67788\n",
+            "Enter password: dgghj\n",
+            "Enter password: qwerty123\n",
+            "Correct password\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 44:\n",
+        "correct_password = \"qwerty123\"\n",
+        "while True:\n",
+        "  password = input(\"Enter password: \")\n",
+        "  if password == correct_password:\n",
+        "    print(\"Correct password\")\n",
+        "    break\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "d2a5189e"
+      },
+      "source": [
+        "### Завдання 45. Сума цифр через while ⭐⭐⭐\n",
+        "\n",
+        "Запитайте у користувача додатнє ціле число і знайдіть суму його цифр, використовуючи `while`.\n",
+        "\n",
+        "**Приклад:** число 1234 → сума 1+2+3+4 = 10.\n",
+        "\n",
+        "> 💡 **Підказка:** У циклі: беремо останню цифру через `n % 10`, додаємо до суми, потім відкидаємо її через `n = n // 10`. Цикл працює, поки `n > 0`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "2a266d95",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6d2939c2-24fe-4ae1-a6fc-579056d17767"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 18777\n",
+            "30\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 45:\n",
+        "n = int(input(\"Enter number: \"))\n",
+        "total = 0\n",
+        "while n > 0:\n",
+        "  total += n % 10\n",
+        "  n = n // 10\n",
+        "\n",
+        "print(total)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1f3031b0"
+      },
+      "source": [
+        "### Завдання 46. Найбільший спільний дільник ⭐⭐⭐\n",
+        "\n",
+        "Запитайте у користувача два додатні числа і знайдіть їхній найбільший спільний дільник (НСД) за алгоритмом Евкліда.\n",
+        "\n",
+        "**Алгоритм:** доки `b ≠ 0`: одночасно `a, b = b, a % b`. Коли `b = 0`, відповідь — це `a`.\n",
+        "\n",
+        "**Приклад:** НСД(48, 36) = 12."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "97e78f9c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a4905a1b-0796-4c65-b5aa-174dc0c8732a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number 1: 48\n",
+            "Enter number 2: 36\n",
+            "12\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 46:\n",
+        "n1 = int(input(\"Enter number 1: \"))\n",
+        "n2 = int(input(\"Enter number 2: \"))\n",
+        "while n1 % n2 != 0:\n",
+        "  n1, n2 = n2, n1 % n2\n",
+        "print(n2)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6c457251"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "# Розділ 6. Списки (`list`) — методи та операції\n",
+        "\n",
+        "**Що треба знати:**\n",
+        "- Створення: `[1, 2, 3]`, `[]` (порожній)\n",
+        "- Доступ: `lst[0]`, `lst[-1]` (останній)\n",
+        "- Довжина: `len(lst)`\n",
+        "- Методи: `.append(x)`, `.insert(i, x)`, `.remove(x)`, `.pop()`, `.sort()`, `.reverse()`\n",
+        "- Перевірка: `x in lst`"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e8b6a688"
+      },
+      "source": [
+        "### Завдання 47. Створення списку ⭐\n",
+        "\n",
+        "Створіть список з 5 ваших улюблених фільмів і виведіть його."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3cc8f02b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c9dcc2b3-2572-4da7-fb74-8266ad0b5c1f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['TVD', 'Twilight', 'Ladybug', 'Titanic', 'Up']\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 47:\n",
+        "movies = [\"TVD\", \"Twilight\", \"Ladybug\", \"Titanic\", \"Up\"]\n",
+        "print(movies)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3593b0cc"
+      },
+      "source": [
+        "### Завдання 48. Додавання у список ⭐\n",
+        "\n",
+        "Створіть порожній список. У циклі `for` додайте до нього числа від 1 до 10. Виведіть результат.\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте метод `.append()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0c8fdb4f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4ab17249-b97d-44ab-a2cb-500062b7fd30"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 48:\n",
+        "lst = []\n",
+        "for i in range(1, 11):\n",
+        "  lst.append(i)\n",
+        "print(lst)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6634a7ad"
+      },
+      "source": [
+        "### Завдання 49. Перший і останній ⭐\n",
+        "\n",
+        "Дано список. Виведіть його перший і останній елементи."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "dc04bac7"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 49:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0f8675ef",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d7154e89-db02-4d74-8007-8e859859e8c7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "червоний, фіолетовий\n"
+          ]
+        }
+      ],
+      "source": [
+        "colors = [\"червоний\", \"жовтий\", \"зелений\", \"синій\", \"фіолетовий\"]\n",
+        "print(str(colors[0])+\",\", colors[len(colors)-1])\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "385932ec"
+      },
+      "source": [
+        "### Завдання 50. Список покупок ⭐⭐\n",
+        "\n",
+        "Створіть список покупок з 3-4 товарів. Виконайте такі дії та виводьте список після кожної:\n",
+        "1. Додайте новий товар у кінець\n",
+        "2. Вставте новий товар на початок\n",
+        "3. Видаліть один товар за назвою\n",
+        "4. Замініть товар на іншому місці на щось нове"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8e16380e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1ef49a53-cd90-4c1b-cf29-fdc4be3472d8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['apple', 'kiwi', 'milk', 'olives', 'ham']\n",
+            "['fish', 'apple', 'kiwi', 'milk', 'olives', 'ham']\n",
+            "['fish', 'apple', 'kiwi', 'milk', 'olives']\n",
+            "['fish', 'apple', 'kiwi', 'lemon', 'olives']\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 50:\n",
+        "lst = [\"apple\", \"kiwi\", \"milk\", \"olives\"]\n",
+        "lst.append(\"ham\")\n",
+        "print(lst)\n",
+        "lst.insert(0, \"fish\")\n",
+        "print(lst)\n",
+        "if \"ham\" in lst:\n",
+        "  lst.remove(\"ham\")\n",
+        "print(lst)\n",
+        "for x in range(0, len(lst)):\n",
+        "  if lst[x] == \"milk\":\n",
+        "    lst[x] = \"lemon\"\n",
+        "print(lst)\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3107ea56"
+      },
+      "source": [
+        "### Завдання 51. Сортування і реверс ⭐⭐\n",
+        "\n",
+        "Дано список чисел. Відсортуйте його за зростанням, виведіть. Потім переверніть, виведіть."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "289ded3f"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 51:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "cce2c442",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "610f1341-af3d-405a-b669-284c6da9efc4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3, 8, 17, 24, 42, 56, 73, 89, 91]\n",
+            "[91, 89, 73, 56, 42, 24, 17, 8, 3]\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers = [42, 17, 89, 3, 56, 91, 24, 8, 73]\n",
+        "numbers.sort()\n",
+        "print(numbers)\n",
+        "numbers.reverse()\n",
+        "print(numbers)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "25a77090"
+      },
+      "source": [
+        "### Завдання 52. Парні і непарні в окремі списки ⭐⭐\n",
+        "\n",
+        "Дано список чисел. Створіть два нові списки: один з парними числами, другий з непарними. Виведіть обидва."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f25fa24f"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 52:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ecb38a2b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1a61551e-faab-4ff7-9f06-8caf2f4fa507"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[12, 18, 14, 8, 6] [7, 3, 25, 9, 21, 11, 33]\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers = [12, 7, 18, 3, 25, 9, 14, 21, 8, 11, 6, 33]\n",
+        "lst1 = []\n",
+        "lst2 = []\n",
+        "for n in range(0, len(numbers)):\n",
+        "  if numbers[n] % 2 == 0:\n",
+        "    lst1.append(numbers[n])\n",
+        "  else:\n",
+        "    lst2.append(numbers[n])\n",
+        "print(lst1, lst2)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5c66cb81"
+      },
+      "source": [
+        "### Завдання 53. Унікальні елементи ⭐⭐\n",
+        "\n",
+        "Дано список з повторами. Створіть новий список, у якому кожен елемент зустрічається лише один раз.\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть порожній список `unique = []`. Перебирайте оригінальний список і додавайте елемент тільки якщо його ЩЕ НЕМАЄ в `unique`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f323d4cd"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 53:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "55201a14",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b8d43746-d03f-4d1d-9331-55d6451b1b34"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['яблуко', 'банан', 'груша', 'слива']\n"
+          ]
+        }
+      ],
+      "source": [
+        "items = [\"яблуко\", \"банан\", \"яблуко\", \"груша\", \"банан\", \"слива\", \"яблуко\", \"груша\"]\n",
+        "unique = []\n",
+        "for el in items:\n",
+        "  if el not in unique:\n",
+        "    unique.append(el)\n",
+        "print(unique)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "085bd13d"
+      },
+      "source": [
+        "### Завдання 54. Підрахунок входжень ⭐⭐\n",
+        "\n",
+        "Дано список і елемент. Підрахуйте, скільки разів цей елемент зустрічається у списку **без використання методу `.count()`**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "b3199a67"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 54:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ed90cd4c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "efbddebf-a981-4c94-d8b2-1cceac8be805"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ],
+      "source": [
+        "words = [\"кіт\", \"пес\", \"кіт\", \"хом'як\", \"кіт\", \"пес\", \"папуга\", \"кіт\"]\n",
+        "target = \"кіт\"\n",
+        "count = 0\n",
+        "for t in words:\n",
+        "  if t == target:\n",
+        "    count += 1\n",
+        "print(count)\n",
+        "# count = words.count(target)\n",
+        "# print(count)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "59620dd4"
+      },
+      "source": [
+        "### Завдання 55. Об'єднання списків ⭐⭐⭐\n",
+        "\n",
+        "Дано два списки. Створіть новий список, який містить:\n",
+        "1. Спочатку елементи першого\n",
+        "2. Потім — елементи другого\n",
+        "3. Після — лише ті елементи з обох списків, які зустрічаються в обох\n",
+        "\n",
+        "**Приклад:** `[1, 2, 3]` + `[2, 3, 4]` → `[1, 2, 3, 2, 3, 4, 2, 3]` (бо 2 і 3 — спільні)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "b44d898c"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 55:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "916e7f00",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e1a06a57-ed51-46db-8fc7-8f28e9467360"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 3, 3, 5, 3, 4, 5, 6, 7]\n",
+            "[3, 4, 5]\n"
+          ]
+        }
+      ],
+      "source": [
+        "list_a = [1, 2, 3, 4, 5]\n",
+        "list_b = [3, 4, 5, 6, 7]\n",
+        "unique = []\n",
+        "lst1 = []\n",
+        "for el in list_a:\n",
+        "  lst1.append(el)\n",
+        "for el in list_b:\n",
+        "  lst1.append(el)\n",
+        "print(lst1)\n",
+        "for el in list_a:\n",
+        "  if el in list_b:\n",
+        "    if el not in unique:\n",
+        "      unique.append(el)\n",
+        "print(unique)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "be6d8332"
+      },
+      "source": [
+        "### Завдання 56. Сортування без `.sort()` ⭐⭐⭐\n",
+        "\n",
+        "Дано список чисел. Відсортуйте його за зростанням **без використання методу `.sort()` та функції `sorted()`**.\n",
+        "\n",
+        "> 💡 **Підказка:** Найпростіший алгоритм — «бульбашкове сортування»: у вкладеному циклі порівнюємо сусідні елементи і міняємо їх місцями, якщо ліворуч стоїть більший. Повторюємо, поки не пройдемо весь список без жодної заміни."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "c5a9d034"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 56:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "247e00cc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ea3e48f4-85c8-4f78-c2b6-2305b932b753"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3, 17, 24, 42, 56, 89, 91]\n"
+          ]
+        }
+      ],
+      "source": [
+        "numbers = [42, 17, 89, 3, 56, 91, 24]\n",
+        "for i in range(0, len(numbers)):\n",
+        "  for n in range(0, len(numbers) - i - 1):\n",
+        "    if numbers[n] > numbers[n+1]:\n",
+        "      numbers[n], numbers[n+1] = numbers[n+1], numbers[n]\n",
+        "print(numbers)\n",
+        "# numbers.sort()\n",
+        "# print(numbers)\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c9ebf547"
+      },
+      "source": [
+        "---\n",
+        "\n",
+        "# Розділ 7. 🔥 Комбіновані завдання\n",
+        "\n",
+        "Тут вам знадобиться поєднати кілька різних тем у одному завданні. Це завдання, найбільш близькі до реальних задач, які доводиться розв'язувати програмістам."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "d3ab2c38"
+      },
+      "source": [
+        "### Завдання 57. Меню кафе ⭐⭐\n",
+        "\n",
+        "Дано список страв і список їхніх цін (відповідні позиції).\n",
+        "1. Виведіть меню у форматі «Назва — Ціна грн».\n",
+        "2. Підрахуйте і виведіть середню ціну.\n",
+        "3. Виведіть страви, ціна яких вища за середню.\n",
+        "\n",
+        "> 💡 **Підказка:** Щоб одночасно перебирати два списки, використовуйте індекс: `for i in range(len(dishes)):`, далі `dishes[i]` і `prices[i]`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "073f0f33"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 57:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "74d7299b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c55675e5-39e4-4e48-8173-01b38ea0be5e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Борщ - 85 грн\n",
+            "Вареники - 95 грн\n",
+            "Салат - 70 грн\n",
+            "Стейк - 320 грн\n",
+            "Десерт - 120 грн\n",
+            "Чай - 35 грн\n",
+            "Average price: 120.83333333333333\n",
+            "Стейк\n"
+          ]
+        }
+      ],
+      "source": [
+        "dishes = [\"Борщ\", \"Вареники\", \"Салат\", \"Стейк\", \"Десерт\", \"Чай\"]\n",
+        "prices = [85, 95, 70, 320, 110, 35]\n",
+        "count = 0\n",
+        "for i in range(0, len(dishes)):\n",
+        "  count += prices[i]\n",
+        "  print(dishes[i] + \" - \" + str(prices[i]) + \" грн\")\n",
+        "average = count / len(prices)\n",
+        "print(\"Average price:\", average)\n",
+        "for a in range (0, len(dishes)):\n",
+        "  if prices[a] > average:\n",
+        "    print(dishes[a])\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "d8a22ea3"
+      },
+      "source": [
+        "### Завдання 58. Шифр Цезаря ⭐⭐⭐\n",
+        "\n",
+        "Запитайте у користувача слово (українською або англійською) і число `shift`.\n",
+        "Зашифруйте слово: кожну літеру замініть на ту, що стоїть на `shift` позицій далі в алфавіті.\n",
+        "\n",
+        "**Приклад:** слово `abc`, `shift = 2` → `cde`.\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте функції `ord(letter)` (повертає код символу) і `chr(num)` (повертає символ за кодом). Для кожної літери: новий код = ord(letter) + shift. Для простоти можна не обробляти переходи через кінець алфавіту."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f383fd1d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "25867223-77d9-4175-f5af-0027a4cacdc3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter code: 2\n",
+            "jcrr{\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 58:\n",
+        "t = input(\"Enter text: \")\n",
+        "n = int(input(\"Enter code: \"))\n",
+        "l = \"\"\n",
+        "for i in range(0, len(t)):\n",
+        "  num = ord(t[i])\n",
+        "  l += chr(num+n)\n",
+        "\n",
+        "print(l)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "37255a0b"
+      },
+      "source": [
+        "### Завдання 59. Гра «Вгадай число» ⭐⭐⭐\n",
+        "\n",
+        "Створіть змінну `secret = 42` (загадане число). У циклі `while` запитуйте у користувача число:\n",
+        "- Якщо введене число менше за загадане — пишіть «Більше»\n",
+        "- Якщо більше — «Менше»\n",
+        "- Якщо вгадав — пишіть «Вітаю!» і завершуйте цикл\n",
+        "- Підрахуйте кількість спроб і виведіть її в кінці\n",
+        "\n",
+        "> 💡 **Підказка:** Використайте змінну-прапорець `guessed = False` як умову циклу. Коли користувач вгадав — `guessed = True`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8ecd4c91",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "59864597-811e-42ad-d503-ac151384df70"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number: 23\n",
+            "Більше\n",
+            "Enter number: 35\n",
+            "Більше\n",
+            "Enter number: 44\n",
+            "Менше\n",
+            "Enter number: 89\n",
+            "Менше\n",
+            "Enter number: 42\n",
+            "Вітаю!\n",
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Ваш код для завдання 59:\n",
+        "secret = 42\n",
+        "count = 0\n",
+        "while True:\n",
+        "  n = int(input(\"Enter number: \"))\n",
+        "  count += 1\n",
+        "  if n < secret:\n",
+        "    print(\"Більше\")\n",
+        "  elif n > secret:\n",
+        "    print(\"Менше\")\n",
+        "  else:\n",
+        "    print(\"Вітаю!\")\n",
+        "    break\n",
+        "print(count)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1297383b"
+      },
+      "source": [
+        "### Завдання 60. Аналіз тексту ⭐⭐⭐\n",
+        "\n",
+        "Дано рядок з реченням. Виконайте такий аналіз і виведіть результати:\n",
+        "1. Кількість літер (без пробілів)\n",
+        "2. Кількість слів\n",
+        "3. Кількість голосних літер\n",
+        "4. Найдовше слово\n",
+        "\n",
+        "> 💡 **Підказка:** Метод `.split()` розбиває рядок на список слів. Наприклад, `'hello world'.split()` повертає `['hello', 'world']`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f323066a"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 60:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0a63354a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ed0b020a-949a-4158-afa1-d891991c2afb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Літер без пробілів: 37\n",
+            "Слів: 7\n",
+            "Голосних: 16\n",
+            "Найдовше слово: програмування\n"
+          ]
+        }
+      ],
+      "source": [
+        "text = \"програмування на python це цікаво і корисно\"\n",
+        "# Ваш код:\n",
+        "words = text.split(\" \")\n",
+        "l = 0\n",
+        "for char in text:\n",
+        "  if char != \" \":\n",
+        "    l += 1\n",
+        "word_count = len(words)\n",
+        "vowels = 0\n",
+        "for char in text.lower():\n",
+        "  if char in \"аеиіоуяюєїaeiouy\":\n",
+        "    vowels += 1\n",
+        "longest = words[0]\n",
+        "for word in words:\n",
+        "  if len(word) > len(longest):\n",
+        "    longest = word\n",
+        "print(f\"Літер без пробілів: {l}\")\n",
+        "print(f\"Слів: {word_count}\")\n",
+        "print(f\"Голосних: {vowels}\")\n",
+        "print(f\"Найдовше слово: {longest}\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "54be517f"
+      },
+      "source": [
+        "### Завдання 61. Магазин: статистика продажів ⭐⭐⭐\n",
+        "\n",
+        "Дано список продажів за тиждень (по одному числу на день, починаючи з понеділка).\n",
+        "Виведіть:\n",
+        "1. Загальну виручку за тиждень\n",
+        "2. Середню виручку на день\n",
+        "3. Найкращий день (з найбільшою виручкою) — назвою (Понеділок, Вівторок...)\n",
+        "4. Кількість днів, коли виручка була вищою за середню\n",
+        "\n",
+        "> 💡 **Підказка:** Створіть список з назвами днів: `days = [\"Понеділок\", \"Вівторок\", ...]`. Індекс найкращого дня знайдіть у циклі (або через `sales.index(max(sales))`)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "76296882"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 61:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1b203306",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c23d376d-017a-4769-b41c-325aa81bb698"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Загальна виручка: 33100\n",
+            "Середня виручка: 4728.57\n",
+            "Найкращий день: Saturday\n",
+            "Днів вище середнього: 3\n"
+          ]
+        }
+      ],
+      "source": [
+        "sales = [3200, 2800, 4100, 3500, 5200, 7800, 6500]\n",
+        "# Ваш код:\n",
+        "days = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"]\n",
+        "total = 0\n",
+        "for num in sales:\n",
+        "  total += num\n",
+        "avg_total = total / len(sales)\n",
+        "best_day = 0\n",
+        "for i in range(len(sales)):\n",
+        "  if sales[i] > sales[best_day]:\n",
+        "    best_day = i\n",
+        "count = 0\n",
+        "for num in sales:\n",
+        "  if num > avg_total:\n",
+        "    count += 1\n",
+        "print(f\"Загальна виручка: {total}\")\n",
+        "print(f\"Середня виручка: {avg_total:.2f}\")\n",
+        "print(f\"Найкращий день: {days[best_day]}\")\n",
+        "print(f\"Днів вище середнього: {count}\")\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c1a928c9"
+      },
+      "source": [
+        "### Завдання 62. Турнірна таблиця ⭐⭐⭐\n",
+        "\n",
+        "Дано два списки: команди та їхні очки (відповідні позиції).\n",
+        "Виведіть турнірну таблицю, ВІДСОРТОВАНУ за спаданням очок, у такому форматі:\n",
+        "```\n",
+        "1. Шахтар — 67 очок\n",
+        "2. Динамо — 64 очки\n",
+        "...\n",
+        "```\n",
+        "\n",
+        "> 💡 **Підказка:** Найпростіший спосіб: у циклі знаходьте команду з максимальними очками, виводьте її, потім видаляйте цю пару (команду і очки) з обох списків. Повторюйте, поки списки не спорожніють."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "760b2528"
+      },
+      "outputs": [],
+      "source": [
+        "# Ваш код для завдання 62:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "5c891267",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "54987ee1-30d2-49b3-95c6-0f5b1cc6bc00"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1. Шахтар — 67 очок\n",
+            "2. Динамо — 64 очок\n",
+            "3. Зоря — 52 очок\n",
+            "4. Дніпро — 48 очок\n",
+            "5. Олександрія — 45 очок\n",
+            "6. Ворскла — 39 очок\n"
+          ]
+        }
+      ],
+      "source": [
+        "teams = [\"Динамо\", \"Шахтар\", \"Зоря\", \"Дніпро\", \"Ворскла\", \"Олександрія\"]\n",
+        "points = [64, 67, 52, 48, 39, 45]\n",
+        "# Ваш код:\n",
+        "place = 1\n",
+        "while len(points) > 0:\n",
+        "  i = points.index(max(points))\n",
+        "  print(f\"{place}. {teams[i]} — {points[i]} очок\")\n",
+        "  teams.pop(i)\n",
+        "  points.pop(i)\n",
+        "  place += 1"
+      ]
+    }
+  ]
+}
